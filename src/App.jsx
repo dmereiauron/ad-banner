@@ -1,12 +1,12 @@
-import Banner from './components/Banner'
-import { GlobalStyles } from './styles/GlobalStyles'
+import Banner from "./components/Banner";
+import { GlobalStyles } from "./styles/GlobalStyles";
 function App() {
-	return (
-		<>
-			<GlobalStyles />
-			<Banner />
-		</>
-	)
+  return (
+    <>
+      <GlobalStyles />
+      <Banner />
+    </>
+  );
 }
 
-export default App
+export default App;
