@@ -9,6 +9,15 @@ export const BannerWrapper = styled.div`
   max-width: 640px;
   max-height: 960px;
 
+  .slides-wrapper {
+    display: flex;
+    width: 200%;
+  }
+
+  .slide {
+    width: 50%;
+  }
+
   .footer {
     width: 100%;
     img {

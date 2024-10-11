@@ -21,13 +21,13 @@ const Banner = () => {
   return (
     <BannerWrapper>
       <motion.div
-        style={{ display: "flex", width: "200%" }}
+        className="slides-wrapper"
         initial={{ x: 0 }}
         animate={{ x: activeSlide === 0 ? 0 : "-50%" }}
         transition={{ duration: 1 }}
       >
-        <div style={{ width: "50%" }}>{firstSlide}</div>
-        <div style={{ width: "50%" }}>{activeSlide === 1 && secondSlide}</div>
+        <div className="slide">{firstSlide}</div>
+        <div className="slide">{activeSlide === 1 && secondSlide}</div>
       </motion.div>
       <div className="footer">
         <img src={footerLogoLink} alt="Footer Logo" />
