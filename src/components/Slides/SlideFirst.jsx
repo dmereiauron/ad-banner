@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 import arrow from "../../assets/slide1/arrow.png";
 import cta from "../../assets/slide1/cta.png";
 import gesture from "../../assets/slide1/gesture.png";
@@ -86,4 +87,4 @@ const FirstSlide = ({ setNewSlide }) => {
   );
 };
 
-export default FirstSlide;
+export default memo(FirstSlide);

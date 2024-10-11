@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 import cta from "../../assets/slide1/cta.png";
 import h1 from "../../assets/slide2/hl1.png";
 import h2 from "../../assets/slide2/hl2.png";
@@ -118,4 +119,4 @@ const SecondSlide = () => {
   );
 };
 
-export default SecondSlide;
+export default memo(SecondSlide);

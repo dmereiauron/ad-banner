@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useState } from "react";
 import footerLogoLink from "../assets/logo.png";
 import { BannerWrapper } from "../styles/Banner.styles";
 import SlideFirst from "./Slides/SlideFirst";
@@ -12,12 +12,6 @@ const Banner = () => {
     setActiveSlide((prevSlide) => (prevSlide === 0 ? 1 : 0));
   }, []);
 
-  const firstSlide = useMemo(
-    () => <SlideFirst setNewSlide={handleSetNewSlide} />,
-    [handleSetNewSlide],
-  );
-  const secondSlide = useMemo(() => <SlideSecond />, []);
-
   return (
     <BannerWrapper>
       <motion.div
@@ -26,8 +20,10 @@ const Banner = () => {
         animate={{ x: activeSlide === 0 ? 0 : "-50%" }}
         transition={{ duration: 1 }}
       >
-        <div className="slide">{firstSlide}</div>
-        <div className="slide">{activeSlide === 1 && secondSlide}</div>
+        <div className="slide">
+          {<SlideFirst setNewSlide={handleSetNewSlide} />}
+        </div>
+        <div className="slide">{activeSlide === 1 && <SlideSecond />}</div>
       </motion.div>
       <div className="footer">
         <img src={footerLogoLink} alt="Footer Logo" />
