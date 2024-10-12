@@ -21,7 +21,7 @@ const Banner = () => {
         transition={{ duration: 1 }}
       >
         <div className="slide">
-          {<SlideFirst setNewSlide={handleSetNewSlide} />}
+          <SlideFirst setNewSlide={handleSetNewSlide} />
         </div>
         <div className="slide">{activeSlide === 1 && <SlideSecond />}</div>
       </motion.div>
