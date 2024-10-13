@@ -112,6 +112,10 @@ export const SlideSecondStyle = styled.div`
     margin-top: -1%;
     width: 100%;
     cursor: pointer;
+    picture {
+      display: flex;
+      justify-content: center;
+    }
     &:hover {
       img {
         opacity: 0.8;

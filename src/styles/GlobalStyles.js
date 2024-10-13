@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Asket', sans-serif;
     background-color: #fff;
   }
 

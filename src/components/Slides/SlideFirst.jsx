@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
-import { memo } from "react";
+import React, { memo } from "react";
 import arrow from "../../assets/slide1/arrow.png";
+import arrowWEBP from "../../assets/slide1/arrow.webp";
 import cta from "../../assets/slide1/cta.png";
+import ctaWEBP from "../../assets/slide1/cta.webp";
 import gesture from "../../assets/slide1/gesture.png";
+import gestureWEBP from "../../assets/slide1/gesture.webp";
 import h1 from "../../assets/slide1/hl1.png";
+import h1WEBP from "../../assets/slide1/hl1.webp";
 import h2 from "../../assets/slide1/hl2.png";
+import h2WEBP from "../../assets/slide1/hl2.webp";
 import packshots from "../../assets/slide1/packshots.png";
+import packshotsWEBP from "../../assets/slide1/packshots.webp";
 import sl from "../../assets/slide1/sl.png";
+import slWEBP from "../../assets/slide1/sl.webp";
 import { SlideFirstStyle } from "../../styles/SlideFirst.style";
 
 const FirstSlide = ({ setNewSlide }) => {
@@ -18,7 +25,10 @@ const FirstSlide = ({ setNewSlide }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <img src={h1} alt="title" />
+        <picture>
+          <source srcSet={h1WEBP} type="image/webp" />
+          <img srcSet={h1} alt="title" />
+        </picture>
       </motion.div>
 
       <motion.div
@@ -27,7 +37,10 @@ const FirstSlide = ({ setNewSlide }) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <img src={h2} alt="subtitle" />
+        <picture>
+          <source srcSet={h2WEBP} type="image/webp" />
+          <img srcSet={h2} alt="subtitle" />
+        </picture>
       </motion.div>
 
       <motion.div
@@ -36,7 +49,10 @@ const FirstSlide = ({ setNewSlide }) => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="products"
       >
-        <img src={packshots} alt="products" />
+        <picture>
+          <source srcSet={packshotsWEBP} type="image/webp" />
+          <img srcSet={packshots} alt="products" />
+        </picture>
       </motion.div>
 
       <motion.div
@@ -45,7 +61,10 @@ const FirstSlide = ({ setNewSlide }) => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="sl"
       >
-        <img src={sl} alt="sl" />
+        <picture>
+          <source srcSet={slWEBP} type="image/webp" />
+          <img srcSet={sl} alt="sl" />
+        </picture>
       </motion.div>
 
       <motion.div
@@ -55,7 +74,10 @@ const FirstSlide = ({ setNewSlide }) => {
         className="cta"
       >
         <a href="https://example.com" target="_blank">
-          <img src={cta} alt="cta" />
+          <picture>
+            <source srcSet={ctaWEBP} type="image/webp" />
+            <img srcSet={cta} alt="cta" />
+          </picture>
         </a>
       </motion.div>
 
@@ -72,7 +94,10 @@ const FirstSlide = ({ setNewSlide }) => {
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <img src={arrow} alt="arrow" />
+          <picture>
+            <source srcSet={arrowWEBP} type="image/webp" />
+            <img srcSet={arrow} alt="arrow" />
+          </picture>
         </motion.div>
         <motion.div
           className="gesture"
@@ -80,7 +105,10 @@ const FirstSlide = ({ setNewSlide }) => {
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <img src={gesture} alt="gesture" />
+          <picture>
+            <source srcSet={gestureWEBP} type="image/webp" />
+            <img srcSet={gesture} alt="gesture" />
+          </picture>
         </motion.div>
       </motion.div>
     </SlideFirstStyle>

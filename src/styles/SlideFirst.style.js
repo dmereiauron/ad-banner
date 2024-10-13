@@ -48,6 +48,10 @@ export const SlideFirstStyle = styled.div`
         width: 67%;
       }
     }
+    picture {
+      display: flex;
+      justify-content: center;
+    }
   }
   .arrow {
     cursor: pointer;

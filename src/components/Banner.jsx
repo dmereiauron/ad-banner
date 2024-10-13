@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import footerLogoLink from "../assets/logo.png";
+import footerLogoLinkWEBP from "../assets/logo.webp";
 import { BannerWrapper } from "../styles/Banner.styles";
 import SlideFirst from "./Slides/SlideFirst";
 import SlideSecond from "./Slides/SlideSecond";
@@ -26,7 +27,10 @@ const Banner = () => {
         <div className="slide">{activeSlide === 1 && <SlideSecond />}</div>
       </motion.div>
       <div className="footer">
-        <img src={footerLogoLink} alt="Footer Logo" />
+        <picture>
+          <source srcSet={footerLogoLinkWEBP} type="image/webp" />
+          <img srcSet={footerLogoLink} alt="Footer Logo" />
+        </picture>
       </div>
     </BannerWrapper>
   );
